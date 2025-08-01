@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Job Tracker</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 10px;
+        width: 250px;
+      }
+      button {
+        margin-top: 10px;
+        padding: 8px 12px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Job Info</h3>
+    <p><strong>Title:</strong> <span id="title"></span></p>
+    <p><strong>Company:</strong> <span id="company"></span></p>
+    <p><strong>Source:</strong> <span id="source"></span></p>
+
+    <button id="saveBtn">💾 Save to Storage</button>
+    <br />
+    <a href="dashboard.html" target="_blank">
+      <button>📊 Open Dashboard</button>
+    </a>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

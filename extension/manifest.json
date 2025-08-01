@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Job Tracker Logger",
+  "version": "1.0",
+  "description": "Log jobs directly from job boards",
+  "permissions": ["scripting", "tabs", "storage", "notifications"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.linkedin.com/*", "*://*.indeed.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": ["<all_urls>"],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "dashboard.html",
+        "static/*"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
